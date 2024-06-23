@@ -11,7 +11,7 @@ namespace crud_mvc.service
             
         }
 
-        public DbSet<Student> Products { get; set; }
+        public DbSet<Student> Students { get; set; }
 
     }
 }
