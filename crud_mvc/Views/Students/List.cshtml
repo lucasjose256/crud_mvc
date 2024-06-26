@@ -1,0 +1,39 @@
+@*
+For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<crud_mvc.Models.entity.Student>;
+
+<h1>Students</h1>
+
+<table class="table">
+    <thead  class="thead-dark"> 
+
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                NAME
+            </th>
+            <th>
+                E-MAIL
+            </th>
+            <th>    <th>
+        </tr>
+    </thead>
+<tbody>
+
+    @foreach(var student in Model){
+<tr>
+    <td>@student.Id</td>
+    <td>@student.Name</td>
+    <td>@student.Email</td>
+    <td>
+        <a href="">EDIT</a>
+    </td>
+</tr>
+    }
+</tbody>
+</table>

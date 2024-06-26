@@ -1,7 +1,9 @@
-﻿using crud_mvc.Models;
+﻿using System.Data.Common;
+using crud_mvc.Models;
 using crud_mvc.Models.entity;
 using crud_mvc.service;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace crud_mvc.Controllers
 {
@@ -35,5 +37,15 @@ namespace crud_mvc.Controllers
             return View();
         }
 
+
+
+[HttpGet]
+        public async Task< IActionResult> List()
+        {
+      var studentsList=    await dbContext.Students.ToListAsync();
+            return View(studentsList);
+        }
     }
+
+        
 }
